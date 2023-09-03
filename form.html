@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🖌 Web Form 📋</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('formback1.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #00ff00;
+        }
+
+        form {
+            position: relative;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+            width: 400px;
+            margin: 20px auto;
+            animation: scaleIn 0.5s ease-in-out;
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+            margin: 5px 0;
+        }
+
+        label {
+            font-weight: bold;
+            color: #444;
+            display: block;
+            margin-top: 15px;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .checkbox-group,
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+        }
+
+        .checkbox-group div,
+        .radio-group div {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        select,
+        input[type="radio"],
+        input[type="checkbox"] {
+            transition: transform 0.3s ease;
+        }
+
+        select:hover,
+        input[type="radio"]:hover,
+        input[type="checkbox"]:hover {
+            transform: scale(1.05);
+        }
+
+        select option {
+            text-align: center;
+        }
+
+        
+        .radio-group input[type="radio"]:checked + label,
+        .checkbox-group input[type="checkbox"]:checked + label {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 8px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .radio-group input[type="radio"]:hover + label,
+        .checkbox-group input[type="checkbox"]:hover + label {
+            background-color: #0056b3;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            appearance: none;
+            position: relative;
+            width: 16px;
+            height: 16px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+            margin-right: 8px;
+        }
+
+        .checkbox-group input[type="checkbox"]:checked {
+            background-color: #007BFF;
+            border: none;
+        }
+
+        .checkbox-group input[type="checkbox"]:checked:after {
+            content: '\2713';
+            color: #fff;
+            position: absolute;
+            left: 4px;
+            top: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="root.html">Home/Root</a>
+        <a href="Design.html">Design</a>
+        <a href="d5trived.html">d5trived</a>
+        <a href="Cube.html">Animation</a>
+    </div>
+    <form action="https://student.cs.uwaterloo.ca/~cs200/cgi-bin/Responder.cgi" method="POST">
+        <h1>Dhruv Trivedi</h1>
+        <h2>d5trived</h2>
+        <input type="hidden" name="identity" value="Dhruv Trivedi">
+        <label for="idNumber">Registration Number:</label>
+        <input type="text" id="idNumber" name="idNumber" style="border: 2px solid purple; box-shadow: 0 0 5px rgba(128, 0, 128, 0.5), 0 0 10px rgba(128, 0, 128, 0.3);">
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4" style="border: 2px solid green; box-shadow: 0 0 5px rgba(0, 128, 0, 0.5), 0 0 10px rgba(0, 128, 0, 0.3);"></textarea>
+
+        <label style="margin-top: 20px;">Lab:</label>
+        <div class="radio-group" style="margin-top: 5px;">
+            <div>
+                <input type="radio" id="830TT" name="lab" value="Lab101">
+                <label for="830TT">830 TT</label>
+            </div>
+            <div>
+                <input type="radio" id="1030TT" name="lab" value="Lab102">
+                <label for="1030TT">1030 TT</label>
+            </div>
+            <div>
+                <input type="radio" id="1430WF" name="lab" value="Lab103">
+                <label for="230MW">1430 WF</label>
+            </div>
+        </div>
+
+        <label for="app">Application:</label>
+        <select id="app" name="app">
+            <option value="Word">Word</option>
+            <option value="Excel">Excel</option>
+            <option value="HTML">HTML</option>
+            <option value="Pixel Graphics">Pixel Graphics</option>
+            <option value="Social Media">Social Media</option>
+            <option value="FileMaker">FileMaker</option>
+        </select>
+
+        <label style="margin-top: 20px;">Preferred Platform:</label>
+        <div class="checkbox-group" style="margin-top: 5px;">
+            <div>
+                <input type="checkbox" id="mac" name="mac" value="Yes">
+                <label for="mac">Macintosh</label>
+            </div>
+            <div>
+                <input type="checkbox" id="win" name="win" value="Yes">
+                <label for="win">Windows</label>
+            </div>
+            <div>
+                <input type="checkbox" id="unix" name="unix" value="Yes">
+                <label for="unix">Linux</label>
+            </div>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Design Principles</title>
+    <style>
+
+        nav {
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+            transition: color 0.5s;
+        }
+        nav a:hover {
+            color: #00ff00;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to bottom, #000000, #808080);
+            color: #FFFFFF;
+            overflow-x: hidden;
+        }
+        h1 {
+            background: linear-gradient(90deg, red, yellow, green, cyan, blue, violet);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 5s infinite linear, lightning 3s infinite alternate;
+        }
+        h2 {
+            animation: colorChange 5s infinite ease-in-out;
+        }
+        ul {
+            text-align: left;
+            display: inline-block;
+        }
+        ul li {
+            animation: fadeIn 2s ease-in-out;
+            transition: all .3s ease-in-out;
+        }
+        ul li:hover {
+            border: 1px solid #00ff00;
+            box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00, 0 0 20px #00ff00;
+        }
+        /*  Animations */
+        @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+        @keyframes slideIn {
+            0% {transform: translateX(-50px); opacity: 0;}
+            100% {transform: translateX(0); opacity: 1;}
+        }
+        @keyframes rotate {
+            0% {transform: rotate(0deg);}
+            100% {transform: rotate(360deg);}
+        }
+        @keyframes colorChange {
+            0%, 100% {color: teal;}
+            50% {color: purple;}
+        }
+        @keyframes gradient {
+            0% {background-position: 0%;}
+            100% {background-position: 100%;}
+        }
+        @keyframes lightning {
+            0% { box-shadow: 0 0 5px #ff0, 0 0 10px #ff0, 0 0 15px #ff0; }
+            100% { box-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="root.html">Home/Root</a>
+        <a href="d5trived.html">d5trived</a>
+        <a href="form.html">Form</a>
+        <a href="Cube.html">Animation</a>
+    </nav>
+    <h1>Design Principles</h1>
+
+    <h2>Proximity</h2>
+    <ul>
+        <li>Proximity refers to the grouping of related elements closely together to form a single visual unit, enhancing clarity and readability.</li>
+        <li>The principle of proximity is applied in the HTML code by grouping related elements within the same `div` tags.</li>
+        <li>For example, the header contains the name "Dhruv Trivedi" and the username "d5trived" grouped closely together.</li>
+        <li>Similarly, links to different pages are arranged close together in a table layout within the `div` tag with class "links-row", creating a visual unit.</li>
+    </ul>
+
+    <h2>Alignment</h2>
+    <ul>
+        <li>Alignment is a design principle that ensures every element on the page has some visual connection with another element. This promotes unity and organization on the page.</li>
+        <li>In the CSS code, alignment is achieved by centering elements using the `text-align: center;` property for classes like "centered", "name", and "header".</li>
+        <li>Additionally, the flex layout is used for classes like "container" and "small-image", establishing alignment among the elements within these containers.</li>
+    </ul>
+
+    <h2>Repetition</h2>
+    <ul>
+        <li>Repetition strengthens a design by unifying and tying together separate parts. Consistent use of design elements adds visual interest and aids comprehension.</li>
+        <li>Repetition in this code is seen in the consistent use of classes like "link", "text-primary", and "centered".</li>
+        <li>For example, the "link" class is repeatedly used for different link elements to provide a consistent appearance.</li>
+    </ul>
+
+    <h2>Contrast</h2>
+    <ul>
+        <li>Contrast draws the viewer's eye to the page by significantly differentiating between two elements. This can be achieved through differences in color, size, typeface, line thickness, etc.</li>
+        <li>Contrast in this code is seen in the use of contrasting colors (classes "background-dark", "text-primary", "text-secondary") and contrast between image and text content.</li>
+        <li>The titles of sections like "Cars" and "Apple iPhone Versions and Prices" are highlighted with a yellow background to stand out from the rest of the content.</li>
+        <li>Furthermore, the CSS animation "pulse" applies a contrast effect to the name, causing it to stand out from the background.</li>
+    </ul>
+</body>
+</html>

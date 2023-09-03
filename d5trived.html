@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+    nav {
+        min-height: 50px;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: black; /* change this to set the color of the links to black */
+        transition: color 0.5s;
+    }
+
+    nav a:hover {
+        color: #00ff00;
+    }
+
+    body {
+        background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("cows.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        .highlighted {
+            background-color: lightgrey;
+        }
+
+        .text-primary {
+            color: darkblue;
+        }
+
+        h1 {
+            position: relative;
+            animation: lightning 1s infinite linear;
+        }
+
+        @keyframes lightning {
+            0% { box-shadow: 0 0 10px #ff0, 0 0 20px #ff0, 0 0 30px #ff0; }
+            100% { box-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000; }
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            const paragraphs = document.querySelectorAll('p');
+            for (let i = 0; i < paragraphs.length; i++) {
+                let para = paragraphs[i];
+                para.addEventListener('mouseover', function() {
+                    this.classList.add('highlighted');
+                });
+                para.addEventListener('mouseout', function() {
+                    this.classList.remove('highlighted');
+                });
+            }
+        };
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="root.html">Home/Root</a>
+        <a href="Design.html">Design</a>
+        <a href="form.html">Form</a>
+        <a href="Cube.html">Animation</a>
+
+    </nav>
+    <div class="centered">
+        <h1 class="text-primary">Dairy Farming 🐄</h1>
+        <a href="https://goo.gl/maps/J6TfEMSZXTDGaDdWA" class="text-secondary" target="_blank" style="font-size:28px;">My Farm:📍Jay Ranchhod Farm</a>
+    </div>
+    <div class="container">
+    <p class="related-items">Dairy farming and the magnificent creatures it revolves around, cows, hold a special place in my heart. There is something indescribably beautiful about the way these gentle animals gracefully contribute to our lives through their milk. The bond between a dairy farmer and their cows is unlike any other, built on a foundation of love, care, and respect. Witnessing their contentment as they graze in lush pastures or relax in comfortable barns fills me with an overwhelming sense of joy and fulfillment.</p>
+    <p class="related-items">Owning a dairy farm is a rewarding and fulfilling experience that allows individuals to be intimately involved in the production of one of the most essential food items: milk. Managing my own dairy farm has been a labor of love, as it requires dedication, hard work, and a deep understanding of animal care and agriculture.</p>
+    <p class="related-items">The daily routine on the farm is both demanding and fulfilling. Milking the cows, feeding and tending to them, and managing their reproduction cycles are just a few of the tasks that require my attention. However, seeing the cows thrive, witnessing the birth of new calves, and producing fresh, nutritious milk brings immense satisfaction.</p>
+    <p class="related-items">Operating a dairy farm also allows me to connect with the local community. I take pride in providing fresh dairy products to my customers, whether it's milk, cheese, or yogurt. Building relationships with customers, understanding their preferences, and educating them about the importance of supporting local agriculture are integral parts of my farm's success.</p>
+    <p class="related-items">The joy of dairy farming comes from the profound appreciation I have for the remarkable nature of cows. Their unique personalities, curious gazes, and gentle demeanour never cease to captivate me. Whether it's the sweet nuzzle of a calf, the rhythmic sound of hooves on the barn floor, or the contented sighs during milking, every interaction with these beautiful creatures fills me with a sense of peace and happiness. The bond forged with cows goes beyond mere companionship; it is a connection that nourishes the soul and brings immense satisfaction.</p>
+    <p class="related-items">Overall, my dairy farm is not only a business but a way of life. It allows me to combine my passion for farming, animal welfare, and providing wholesome food to the community. It is a constant journey of learning and improvement, and I am grateful for the opportunity to contribute to the agricultural industry and make a positive impact on the lives of both animals and people.</p>
+    <p class="related-items">The allure of dairy farming also lies in the deep satisfaction of nurturing and caring for these incredible animals. Watching the cows flourish under my watchful eye, ensuring they have access to nutritious feed, clean water, and a comfortable environment, fills me with a profound sense of accomplishment. The fulfillment derived from providing a safe and loving space for these animals, where they can express their natural behaviours and live a life free from stress and harm, is immeasurable. Their well-being becomes my priority, and in return, they reward me with their trust, loyalty, and the gift of milk that sustains so many.</p>
+    <p class="related-items">In summary, my passion for dairy farming and the love I have for cows intertwine harmoniously. The genuine joy and fulfillment I experience from working with these remarkable creatures are beyond words. Each day spent caring for them and witnessing their contentment reaffirms my deep admiration for dairy farming and the profound connection I share with cows.</p>
+    </div>
+</body>
+</html>
